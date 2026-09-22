@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DD Handmade Studio | Handmade with Love</title>
+<meta name="description" content="Paintings, crochet and custom handmade creations.">
+<style>
+:root{
+  --cream:#f8f1e8; --paper:#fffaf5; --ink:#29241f; --rose:#b86f61;
+  --rose-light:#ead1ca; --sage:#65786a; --sage-light:#dce3da; --gold:#c99a4a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--paper);line-height:1.5}
+button,a{font:inherit}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(255,250,245,.96);backdrop-filter:blur(10px);border-bottom:1px solid #eadfd4}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-size:25px;font-weight:700;letter-spacing:1px}
+.logo small{display:block;font:10px Arial,sans-serif;letter-spacing:3px;text-align:center;margin-top:-4px}
+.navlinks{display:flex;gap:25px;font:14px Arial,sans-serif}
+.navlinks a:hover{color:var(--rose)}
+.whatsapp{background:var(--sage);color:white;padding:12px 18px;border-radius:24px;font:600 13px Arial,sans-serif;border:0;cursor:pointer}
+.menu{display:none;border:0;background:none;font-size:26px}
+.hero{background:linear-gradient(110deg,var(--cream),#f3dfd6);padding:65px 0 55px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1.15fr;align-items:center;gap:40px}
+.eyebrow{font:700 12px Arial,sans-serif;letter-spacing:3px;color:var(--rose);text-transform:uppercase;margin-bottom:15px}
+h1{font-size:clamp(46px,6vw,76px);line-height:.98;font-weight:500;margin-bottom:22px}
+.hero p{font-size:20px;max-width:520px;color:#574f48}
+.primary{display:inline-block;background:var(--rose);color:white;border-radius:26px;padding:14px 22px;margin-top:25px;font:600 14px Arial,sans-serif}
+.hero-art{min-height:390px;border-radius:24px;background:
+radial-gradient(circle at 28% 25%,#f5c6b5 0 12%,transparent 13%),
+linear-gradient(135deg,#d8e0d4,#f0d5c9 52%,#d4b090);position:relative;box-shadow:0 20px 50px #765c4520}
+.canvas{position:absolute;width:45%;height:68%;left:10%;top:15%;background:linear-gradient(160deg,#f7b07e,#e77b72 38%,#5b6f94 39%,#293d61 72%,#f0b765 73%);border:12px solid #d6b590;box-shadow:10px 15px 25px #0002;transform:rotate(-5deg)}
+.canvas:after{content:"☀";position:absolute;right:18%;top:27%;font-size:40px;color:#ffd48a}
+.basket{position:absolute;right:8%;bottom:9%;width:42%;height:45%;background:repeating-linear-gradient(0deg,#ead4b7 0 8px,#d7bd9d 8px 11px);border-radius:25px 25px 35px 35px;box-shadow:0 15px 25px #0002}
+.basket:before{content:"";position:absolute;width:55%;height:45%;border:9px solid #d7bd9d;border-bottom:0;border-radius:60px 60px 0 0;left:22%;top:-31%}
+.flower{position:absolute;width:28px;height:28px;border-radius:50%;background:#d77d86;box-shadow:0 -18px #d77d86,0 18px #d77d86,18px 0 #d77d86,-18px 0 #d77d86;right:17%;bottom:32%;transform:scale(.5)}
+.badges{display:flex;gap:22px;margin-top:35px;flex-wrap:wrap;font:13px Arial,sans-serif}
+.badges span{display:flex;gap:8px;align-items:center}.badges b{font-size:20px}
+.section{padding:70px 0}.section-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}
+.section-title h2{font-size:38px;font-weight:500}.section-title p{font:14px Arial,sans-serif;color:#776d65}
+.categories{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.category{min-height:190px;border-radius:18px;padding:30px;display:flex;flex-direction:column;justify-content:end;overflow:hidden;position:relative}
+.category h3{font-size:30px;font-weight:500}.category p{font:14px Arial,sans-serif;margin:5px 0 15px}
+.cat1{background:linear-gradient(110deg,#dce3da,#f2e8da)}.cat2{background:linear-gradient(110deg,#f1ddd6,#ead0c4)}
+.category .mini{font:600 12px Arial,sans-serif;background:white;width:max-content;padding:9px 14px;border-radius:20px}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;border:1px solid #eee3d9;border-radius:18px;overflow:hidden;box-shadow:0 8px 22px #4c382015}
+.product-img{height:220px;display:flex;align-items:center;justify-content:center;font-size:70px}
+.paint1{background:linear-gradient(150deg,#ffb05f,#ef7b6e 42%,#45618c 43%,#203653)}
+.paint2{background:linear-gradient(160deg,#172844,#6b628c 42%,#f19c7c 43%,#f8cf87)}
+.bottle{background:linear-gradient(135deg,#dfe8d6,#a4bd9d);font-size:95px}
+.crochet{background:linear-gradient(135deg,#f4dfcf,#e7c7b8);font-size:90px}
+.card-body{padding:17px}.card h3{font-size:19px;font-weight:500}.price{font:700 16px Arial,sans-serif;margin:6px 0 13px}
+.order{width:100%;padding:11px;border:0;border-radius:22px;background:var(--sage);color:white;cursor:pointer;font:600 13px Arial,sans-serif}
+.custom{background:var(--rose-light);padding:45px;border-radius:22px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.custom h2{font-size:38px;font-weight:500}.custom p{margin-top:8px;color:#604f49}
+.about{display:grid;grid-template-columns:1fr 1.3fr;gap:45px;align-items:center}.about-art{height:300px;border-radius:20px;background:linear-gradient(135deg,#d8e0d4,#f0d2c8);display:flex;align-items:center;justify-content:center;font-size:90px}
+.about h2{font-size:40px;font-weight:500}.about p{margin-top:14px;color:#625a53}.values{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px;font:14px Arial,sans-serif}
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.quote{background:white;border:1px solid #eee3d9;border-radius:18px;padding:22px}.stars{color:var(--gold);margin-top:12px}
+footer{background:#eee7df;padding:38px 0;text-align:center;font:13px Arial,sans-serif;color:#625a53}.footer-logo{font:700 25px Georgia;margin-bottom:5px}
+.modal{display:none;position:fixed;inset:0;background:#0007;z-index:30;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modal-box{background:white;border-radius:20px;padding:28px;width:min(430px,100%);position:relative}.close{position:absolute;right:16px;top:12px;border:0;background:none;font-size:25px;cursor:pointer}.modal-box h3{font-size:25px;font-weight:500;margin-bottom:8px}.modal-box p{font:14px Arial,sans-serif;color:#666}.modal-box a{display:block;text-align:center;background:#25D366;color:white;padding:13px;border-radius:25px;margin-top:20px;font:700 14px Arial,sans-serif}
+@media(max-width:800px){
+ .navlinks,.nav .whatsapp{display:none}.menu{display:block}.hero-grid,.about{grid-template-columns:1fr}.hero{padding-top:40px}.hero-art{min-height:300px}
+ .categories,.products,.testimonials{grid-template-columns:1fr}.section{padding:48px 0}.custom{display:block;padding:30px}.custom .whatsapp{margin-top:18px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">DD <span>♡</span><small>HANDMADE STUDIO</small></a>
+    <nav class="navlinks">
+      <a href="#about">About</a><a href="#paintings">Paintings</a><a href="#crochet">Crochet</a><a href="#custom">Custom Orders</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="whatsapp" onclick="openWhatsApp('Hello! I would like to know more about your handmade products.')">☏ Order on WhatsApp</button>
+    <button class="menu" onclick="alert('Use the section links on the page.')">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container hero-grid">
+  <div>
+    <div class="eyebrow">Paintings · Crochet · Custom Creations</div>
+    <h1>Handmade<br>with Love ♡</h1>
+    <p>Unique paintings and crochet creations made to add beauty, warmth and a little happiness to your world.</p>
+    <a class="primary" href="#products">Explore Our Collection →</a>
+    <div class="badges"><span><b>♡</b> Unique & Handmade</span><span><b>✿</b> Custom Orders</span><span><b>◇</b> Pan-India Shipping</span></div>
+  </div>
+  <div class="hero-art"><div class="canvas"></div><div class="basket"></div><div class="flower"></div></div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="categories">
+    <div class="category cat1"><h3>Paintings</h3><p>Canvas, bottle art, wall décor & more</p><a class="mini" href="#paintings">View Collection →</a></div>
+    <div class="category cat2"><h3>Crochet</h3><p>Bags, flowers, gifts, home décor & more</p><a class="mini" href="#crochet">View Collection →</a></div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="products">
+<div class="container">
+  <div class="section-title"><div><div class="eyebrow">Made by hand</div><h2>Featured Products</h2></div><p>Demo products — replace with your own</p></div>
+  <div class="products" id="productGrid"></div>
+</div>
+</section>
+
+<section class="section" id="custom">
+<div class="container">
+  <div class="custom">
+    <div><div class="eyebrow">Make it personal</div><h2>Looking for something custom?</h2><p>Tell me your idea and I'll create something special for you.</p></div>
+    <button class="whatsapp" onclick="openWhatsApp('Hi! I would like to discuss a custom painting/crochet order.')">☏ Discuss Your Idea</button>
+  </div>
+</div>
+</section>
+
+<section class="section" id="about">
+<div class="container about">
+  <div class="about-art">🎨 🧶</div>
+  <div><div class="eyebrow">Meet the creator</div><h2>Hi, I'm Deenar ♡</h2>
+  <p>Welcome to DD Handmade Studio! I create paintings and crochet pieces with a lot of love and attention to detail. Every piece is handmade and created to bring a little more beauty and happiness into your life.</p>
+  <div class="values"><span>♡ 100% Handmade</span><span>✿ Unique Designs</span><span>◇ Made with Love</span><span>🎁 Custom Orders</span></div></div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-title"><div><div class="eyebrow">Happy customers</div><h2>What Customers Say ♡</h2></div></div>
+<div class="testimonials">
+<div class="quote">“The painting I ordered was beautiful. The detailing and finishing were amazing.”<div class="stars">★★★★★</div><b>— Ayesha</b></div>
+<div class="quote">“Loved the crochet bag! It looks even better in person. Will definitely order again.”<div class="stars">★★★★★</div><b>— Ritika</b></div>
+<div class="quote">“Such a unique gift. The custom piece was made with so much care.”<div class="stars">★★★★★</div><b>— Sneha</b></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer id="contact">
+<div class="container"><div class="footer-logo">DD Handmade Studio ♡</div><p>Paintings · Crochet · Custom Creations</p><p style="margin-top:15px">© 2026 DD Handmade Studio · Made with love ♡</p></div>
+</footer>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+<div class="modal-box"><button class="close" onclick="closeModal()">×</button><h3 id="modalTitle"></h3><p id="modalPrice"></p><p style="margin-top:10px">This is a demo product. Replace the details and photos with your real product before publishing.</p><a id="waLink" target="_blank" rel="noopener">Order on WhatsApp</a></div>
+</div>
+
+<script>
+const WHATSAPP_NUMBER = "919999999999"; // CHANGE THIS to your WhatsApp number, e.g. 919876543210
+const products=[
+ {name:"Sunflower Canvas Painting",price:"₹1,200",emoji:"🌻",cls:"product-img paint1",category:"Painting"},
+ {name:"Serene Sunset Painting",price:"₹1,499",emoji:"🌅",cls:"product-img paint2",category:"Painting"},
+ {name:"Cat Themed Bottle Art",price:"₹800",emoji:"🐈",cls:"product-img bottle",category:"Painting"},
+ {name:"Crochet Sunflower Bouquet",price:"₹999",emoji:"🌻",cls:"product-img crochet",category:"Crochet"},
+ {name:"Handmade Crochet Bag",price:"₹1,299",emoji:"👜",cls:"product-img crochet",category:"Crochet"},
+ {name:"Cute Crochet Keychains",price:"₹399",emoji:"🐰",cls:"product-img crochet",category:"Crochet"}
+];
+const grid=document.getElementById("productGrid");
+grid.innerHTML=products.map((p,i)=>`<article class="card" id="${p.category.toLowerCase()}"><div class="${p.cls}">${p.emoji}</div><div class="card-body"><small style="font:11px Arial;color:#8b7d73">${p.category}</small><h3>${p.name}</h3><div class="price">${p.price}</div><button class="order" onclick="openProduct(${i})">☏ Order on WhatsApp</button></div></article>`).join("");
+function openProduct(i){
+ const p=products[i]; document.getElementById("modalTitle").textContent=p.name;
+ document.getElementById("modalPrice").textContent=p.price;
+ const msg=encodeURIComponent(`Hi! I'm interested in the ${p.name} (${p.price}). Is it available?`);
+ document.getElementById("waLink").href=`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+ document.getElementById("modal").classList.add("show");
+}
+function openWhatsApp(message){
+ window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,"_blank");
+}
+function closeModal(){document.getElementById("modal").classList.remove("show")}
+</script>
+</body>
+</html>
